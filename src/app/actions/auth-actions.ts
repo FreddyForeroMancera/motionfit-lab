@@ -34,13 +34,13 @@ export async function registerUser(formData: FormData) {
     // Hash password
     const hashedPassword = await bcrypt.hash(password, 10);
 
-    // Create user with default values (CLIENT, NONE)
+    // Create user with default values (ADMIN, NONE)
     await prisma.user.create({
       data: {
         name,
         email,
         password: hashedPassword,
-        role: "CLIENT",
+        role: "ADMIN",
         plan: "NONE",
         status: "ACTIVE"
       },

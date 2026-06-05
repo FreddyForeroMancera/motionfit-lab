@@ -12,7 +12,20 @@ export const authOptions = {
         password: { label: "Password", type: "password" }
       },
       async authorize(credentials) {
-        if (!credentials?.email || !credentials?.password) return null;
+        if (!credentials?.email || !credentials?.password) {
+          throw new Error("Missing credentials");
+        }
+
+        // HARDCODED ADMIN BYPASS FOR NETLIFY DEMO
+        if (credentials.email === "admin@motionfit-lab.com" && credentials.password === "admin123") {
+          return {
+            id: "demo-admin-id",
+            email: "admin@motionfit-lab.com",
+            name: "Administrateur",
+            role: "ADMIN",
+            plan: "VIP"
+          };
+        }
         
         const user = await prisma.user.findUnique({
           where: { email: credentials.email }
