@@ -1,0 +1,51 @@
+.carouselContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* Add a subtle zoom effect for dynamism */
+.slide.active img {
+  animation: zoom 10s infinite alternate linear;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(10, 10, 10, 0.8) 0%,
+    rgba(10, 10, 10, 0.4) 50%,
+    rgba(27, 161, 214, 0.2) 100%
+  );
+}

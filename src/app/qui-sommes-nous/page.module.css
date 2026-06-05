@@ -1,0 +1,184 @@
+.aboutHeroContainer {
+  position: relative;
+  width: 100%;
+  background: var(--color-white);
+  border-radius: var(--border-radius-container);
+  padding: 6rem 4rem 0 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mainTitle {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 900;
+  color: var(--color-accent);
+  text-align: center;
+  line-height: 1.1;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: flex-end;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-bottom: 6rem;
+}
+
+.textContent h2 {
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  color: var(--color-text-dark);
+  margin-bottom: 1.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+
+.textContent p {
+  color: var(--color-text-dark);
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+/* Gallery Section */
+.galleryContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(1rem, 2vw, 1.5rem);
+  width: 100%;
+}
+
+.galleryImageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: var(--border-radius-container);
+  overflow: hidden;
+}
+
+.galleryImage {
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.galleryImageWrapper:hover .galleryImage {
+  transform: scale(1.05);
+}
+
+/* Team Instructors Section */
+.teamContainer {
+  width: 100%;
+  background: var(--color-white);
+  border-radius: var(--border-radius-container);
+  padding: 6rem 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+}
+
+.instructorCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.instructorImageWrapper {
+  position: relative;
+  width: 80%;
+  aspect-ratio: 4/5;
+  border-radius: var(--border-radius-card);
+  overflow: hidden;
+  margin-bottom: 2rem;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.instructorName {
+  color: var(--color-accent);
+  font-size: 1.6rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.instructorRole {
+  color: var(--color-text-dark);
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  max-width: 90%;
+  opacity: 0.8;
+}
+
+.instructorBio {
+  color: var(--color-text-dark);
+  font-size: 1rem;
+  line-height: 1.8;
+  text-align: justify;
+  max-width: 95%;
+}
+
+@media (max-width: 900px) {
+  .aboutHeroContainer {
+    padding: 6rem 1.5rem 0 1.5rem;
+  }
+
+  .mainTitle {
+    font-size: clamp(1.8rem, 7vw, 2.5rem);
+  }
+
+  .contentGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .textContent {
+    padding-bottom: 2rem;
+  }
+
+  .textContent h2 {
+    font-size: clamp(1.6rem, 5vw, 2rem);
+  }
+
+  .textContent p {
+    font-size: 1rem;
+  }
+
+  .galleryContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .teamContainer {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 4rem 1.5rem;
+  }
+
+  .instructorImageWrapper {
+    width: 100%;
+  }
+
+  .instructorName {
+    font-size: 1.3rem;
+  }
+
+  .instructorBio {
+    font-size: 0.9rem;
+    text-align: left;
+  }
+}

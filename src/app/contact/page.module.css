@@ -1,0 +1,281 @@
+.pageContainer {
+  width: 100%;
+  background: #f8f9fa; /* Light background for the page bottom */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- HERO SECTION --- */
+.heroSection {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 2rem); /* Make it tall like the other pages */
+  min-height: 45vh;
+  border-radius: var(--border-radius-container); /* Rounded corners */
+  overflow: hidden; /* Ensure image respects border radius */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 2rem;
+  margin-bottom: 2rem;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(17,17,17,0.85) 0%, rgba(17,17,17,0.3) 100%);
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  margin-top: -50px; /* offset upwards so it centers better considering the overlapping card below */
+}
+
+.heroTitle {
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  font-weight: 900;
+  color: var(--color-white);
+  margin-bottom: 1rem;
+}
+
+.heroSubtitle {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* --- OVERLAP CARD CONTENT --- */
+.contentSection {
+  position: relative;
+  z-index: 3;
+  max-width: 1200px;
+  width: 100%;
+  margin: -150px auto 4rem auto; /* Overlaps the hero section */
+  padding: 0 2rem;
+}
+
+.contactCard {
+  background: var(--color-white);
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+}
+
+/* Left Column: Info */
+.infoCol {
+  padding: 4rem;
+  background-color: var(--color-white);
+  border-right: 1px solid #edf2f7;
+}
+
+.colTitle {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #1a202c;
+  margin-bottom: 1rem;
+}
+
+.infoSubtitle {
+  font-size: 1rem;
+  color: #718096;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+}
+
+.infoBlock {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.iconWrapper {
+  width: 45px;
+  height: 45px;
+  background: rgba(0, 180, 216, 0.1);
+  color: var(--color-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1.5rem;
+  flex-shrink: 0;
+  font-size: 1.2rem;
+}
+
+.infoText h4 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #2d3748;
+  margin: 0 0 0.25rem 0;
+}
+
+.infoText p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #4a5568;
+  line-height: 1.5;
+}
+
+.socialMedia {
+  margin-top: 3rem;
+}
+
+.socialMedia h4 {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 1rem;
+}
+
+.socialIcon {
+  width: 40px;
+  height: 40px;
+  background: var(--color-accent);
+  color: var(--color-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.socialIcon:hover {
+  transform: translateY(-3px);
+  background: #0096b4;
+}
+
+/* Right Column: Form */
+.formCol {
+  padding: 4rem;
+  background-color: var(--color-white);
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.fullWidth {
+  grid-column: 1 / -1;
+}
+
+.formLabel {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #4a5568;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.formInput, .formTextarea {
+  width: 100%;
+  background: #f7fafc;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 1rem;
+  font-size: 1rem;
+  color: #2d3748;
+  transition: border-color 0.3s ease, background 0.3s ease;
+  font-family: inherit;
+}
+
+.formInput:focus, .formTextarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  background: var(--color-white);
+}
+
+.formTextarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 1.2rem;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  font-size: 1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 180, 216, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-top: 1rem;
+}
+
+.submitBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 180, 216, 0.6);
+}
+
+/* --- MAP SECTION --- */
+.mapSection {
+  width: 100%;
+  height: 400px;
+  background: #e2e8f0;
+  margin-top: auto;
+  border-radius: var(--border-radius-container);
+  overflow: hidden;
+}
+
+.mapIframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1024px) {
+  .contactCard {
+    grid-template-columns: 1fr;
+  }
+  .infoCol {
+    border-right: none;
+    border-bottom: 1px solid #edf2f7;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    height: 50vh;
+  }
+  .contentSection {
+    margin-top: -100px;
+  }
+  .infoCol, .formCol {
+    padding: 2.5rem;
+  }
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+}
