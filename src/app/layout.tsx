@@ -11,6 +11,7 @@ export const metadata: Metadata = {
 
 import AuthProvider from "../components/AuthProvider";
 import FloatingSocial from "../components/FloatingSocial";
+import WhatsAppButton from "../components/WhatsAppButton";
 
 export default function RootLayout({
   children,
@@ -21,6 +22,7 @@ export default function RootLayout({
     <html lang="fr-CA">
       <body>
         <FloatingSocial />
+        <WhatsAppButton />
         <AuthProvider>
           {children}
         </AuthProvider>

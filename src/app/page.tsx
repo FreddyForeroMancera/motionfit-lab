@@ -6,7 +6,9 @@ import ContactForm from "../components/ContactForm";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import CallToAction from "../components/CallToAction";
+import EventBanner from "../components/EventBanner";
 import SchemaOrg from "../components/SchemaOrg";
+import Testimonials from "../components/Testimonials";
 
 export const metadata = {
   title: "MotionFit-Lab | Optimisez votre corps – Élevez votre performance",
@@ -28,8 +30,8 @@ export default function Home() {
           <h1 className={styles.heroTitle}>Optimisez votre corps.<br/>Élevez votre performance.</h1>
           <div className={styles.heroBottomRow}>
             <div className={styles.heroButtons}>
-              <Link href="#nos-cours" className="btn btn-primary">Explorer nos cours</Link>
-              <Link href="#contact" className="btn btn-secondary" style={{ marginLeft: '1rem' }}>En savoir plus</Link>
+              <Link href="/nos-cours" className="btn btn-primary">Explorer nos cours</Link>
+              <Link href="/qui-sommes-nous" className="btn btn-secondary" style={{ marginLeft: '1rem' }}>En savoir plus</Link>
             </div>
 
             <div className={`${styles.promoCard} animate-fade-up`} style={{ animationDelay: '0.5s' }}>
@@ -89,8 +91,11 @@ export default function Home() {
 
       </section>
 
+      {/* --- EVENT BANNER SECTION --- */}
+      <EventBanner />
+
       {/* --- CTA SECTION (ÉVALUATIONS) --- */}
-      <section id="evaluations" className="container" style={{ margin: '4rem auto' }}>
+      <section id="evaluations" className="container" style={{ margin: '1rem auto 4rem auto' }}>
         <CallToAction />
       </section>
 
@@ -141,6 +146,9 @@ export default function Home() {
       </section>
 
 
+
+      {/* --- TESTIMONIALS SECTION --- */}
+      <Testimonials />
 
       {/* --- FOOTER --- */}
       <Footer />

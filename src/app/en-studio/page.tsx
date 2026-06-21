@@ -3,6 +3,7 @@ import Footer from "../../components/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import CallToAction from "../../components/CallToAction";
+import Testimonials from "../../components/Testimonials";
 import styles from "./page.module.css";
 import rootStyles from "../page.module.css"; // Para utilidades globales si hicieran falta
 
@@ -259,47 +260,12 @@ export default function EnStudio() {
         </div>
       </section>
 
-      {/* --- TESTIMONIALS SECTION --- */}
-      <section className={styles.testiSection}>
-        <div className={styles.testiHeader}>
-          <h2 className={styles.testiTitle}>TÉMOIGNAGES</h2>
-          <h3 className={styles.testiSubtitle}>REJOIGNEZ LE MOUVEMENT</h3>
-          <div className={styles.testiDivider}></div>
-        </div>
-
-        <div className={styles.testiGrid}>
-          {/* Testimonial 1 */}
-          <div className={styles.testiCard}>
-            <div className={styles.testiAvatarWrapper}>
-              <div className={styles.testiAvatar}></div>
-            </div>
-            <div className={styles.testiContent}>
-              <p className={styles.testiText}>
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in"
-              </p>
-              <span className={styles.testiAuthor}>Marissa James</span>
-            </div>
-          </div>
-
-          {/* Testimonial 2 */}
-          <div className={styles.testiCard}>
-            <div className={styles.testiAvatarWrapper}>
-              <div className={styles.testiAvatar}></div>
-            </div>
-            <div className={styles.testiContent}>
-              <p className={styles.testiText}>
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in"
-              </p>
-              <span className={styles.testiAuthor}>Jinga Low</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* --- CTA SECTION --- */}
       <div className="container">
         <CallToAction />
       </div>
+
+      <Testimonials />
 
       <div style={{ marginTop: '2rem' }}>
         <Footer />

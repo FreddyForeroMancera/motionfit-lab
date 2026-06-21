@@ -49,22 +49,12 @@ export default function Header({ theme = 'dark' }: HeaderProps) {
         <Link href="/" className={linkClass} onClick={() => setIsMobileMenuOpen(false)}>Accueil</Link>
         <Link href="/qui-sommes-nous" className={linkClass} onClick={() => setIsMobileMenuOpen(false)}>Qui sommes-nous</Link>
         
-        <div 
-          className={`${styles.dropdown} ${isDropdownOpen ? styles.dropdownActive : ''}`} 
-          ref={dropdownRef}
-          onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-          onMouseEnter={() => setIsDropdownOpen(true)}
-          onMouseLeave={() => setIsDropdownOpen(false)}
-        >
-          <Link href="/nos-cours" className={linkClass} onClick={() => { setIsMobileMenuOpen(false); }}>
-            Nos Cours <span className={styles.dropdownArrow}>▾</span>
-          </Link>
-          <div className={`${styles.dropdownMenu} ${isDropdownOpen ? styles.dropdownMenuOpen : ''}`}>
-            <Link href="/en-studio" className={styles.dropdownItem} onClick={() => { setIsDropdownOpen(false); setIsMobileMenuOpen(false); }}>En Studio</Link>
-            <Link href="/en-ligne" className={styles.dropdownItem} onClick={() => { setIsDropdownOpen(false); setIsMobileMenuOpen(false); }}>En Ligne</Link>
-            <Link href="/en-entreprises" className={styles.dropdownItem} onClick={() => { setIsDropdownOpen(false); setIsMobileMenuOpen(false); }}>En Entreprise</Link>
-          </div>
-        </div>
+        <Link href="/nos-cours" className={linkClass} onClick={() => setIsMobileMenuOpen(false)}>
+          Nos Cours
+        </Link>
+        <Link href="/en-entreprise" className={linkClass} onClick={() => setIsMobileMenuOpen(false)}>
+          En Entreprise
+        </Link>
         
         <Link href="/abonnements" className={linkClass} onClick={() => setIsMobileMenuOpen(false)}>Abonnements</Link>
         <Link href="/articles" className={linkClass} onClick={() => setIsMobileMenuOpen(false)}>Articles</Link>

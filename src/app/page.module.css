@@ -532,6 +532,30 @@
   color: var(--color-accent);
 }
 
+.socialIcons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.socialIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--color-white);
+  transition: all 0.3s ease;
+}
+
+.socialIcon:hover {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  transform: translateY(-3px);
+}
+
 .footerBottom {
   max-width: 1400px;
   margin: 0 auto;

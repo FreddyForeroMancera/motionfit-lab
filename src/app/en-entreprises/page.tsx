@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
 import rootStyles from "../page.module.css";
+import Testimonials from "../../components/Testimonials";
 
 export const metadata = {
   title: "Programmes Entreprises",
@@ -235,6 +236,8 @@ export default function EnEntreprises() {
           OBTENIR UNE SOUMISSION<br/>PERSONNALISÉE
         </Link>
       </section>
+
+      <Testimonials />
 
       <div style={{ marginTop: '2rem' }}>
         <Footer />

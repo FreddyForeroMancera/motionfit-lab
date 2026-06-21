@@ -3,6 +3,7 @@ import Footer from "../../components/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import CallToAction from "../../components/CallToAction";
+import Testimonials from "../../components/Testimonials";
 import styles from "./page.module.css";
 import rootStyles from "../page.module.css";
 
@@ -169,6 +170,8 @@ export default function EnLigne() {
       <div className="container">
         <CallToAction />
       </div>
+
+      <Testimonials />
 
       <div style={{ marginTop: '2rem' }}>
         <Footer />
