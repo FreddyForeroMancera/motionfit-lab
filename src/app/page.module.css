@@ -215,7 +215,7 @@
 /* --- LIGHT SECTION (PROGRAMMES) --- */
 .sectionLight {
   width: 100%;
-  padding: 6rem 4rem;
+  padding: 6rem 4rem 4rem 4rem; /* Top 6rem, Right/Left 4rem, Bottom 4rem */
   background: var(--color-white); /* Used to be body color, now explicitly white card */
   border-radius: var(--border-radius-container);
   overflow: hidden;
@@ -226,7 +226,7 @@
   grid-template-columns: 1.2fr 1fr;
   gap: 4rem;
   align-items: center;
-  margin-bottom: 5rem;
+  margin-bottom: 4rem; /* Matched to bottom padding of sectionLight */
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
