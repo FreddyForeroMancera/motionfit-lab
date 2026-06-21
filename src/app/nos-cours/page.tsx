@@ -5,7 +5,12 @@ import Link from "next/link";
 import styles from "./page.module.css";
 import rootStyles from "../page.module.css";
 
-export default function Programmes() {
+export const metadata = {
+  title: "Nos Programmes",
+  description: "Découvrez nos solutions de bien-être premium, coaching en studio, entreprise et en ligne.",
+};
+
+export default function NosCours() {
   return (
     <main className={rootStyles.mainWrapper}>
       <Header theme="light" />

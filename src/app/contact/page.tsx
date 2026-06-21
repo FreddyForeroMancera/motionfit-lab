@@ -4,6 +4,11 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import rootStyles from "../page.module.css";
 
+export const metadata = {
+  title: "Contact",
+  description: "Contactez MotionFit-Lab à Québec. Prenez rendez-vous pour votre évaluation posturale et biomécanique.",
+};
+
 export default function Contact() {
   return (
     <main className={rootStyles.mainWrapper}>

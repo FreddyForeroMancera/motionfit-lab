@@ -15,7 +15,7 @@ export default function Footer() {
           <ul>
             <li><Link href="/">Accueil</Link></li>
             <li><Link href="/qui-sommes-nous">Qui sommes-nous</Link></li>
-            <li><Link href="/programmes">Programmes</Link></li>
+            <li><Link href="/nos-cours">Nos Cours</Link></li>
             <li><Link href="/#evaluations">Évaluations & Analyses</Link></li>
             <li><Link href="/#entreprises">Entreprises</Link></li>
             <li><Link href="/#abonnements">Abonnements</Link></li>

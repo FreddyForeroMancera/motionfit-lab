@@ -6,6 +6,11 @@ import CallToAction from "../../components/CallToAction";
 import styles from "./page.module.css";
 import rootStyles from "../page.module.css";
 
+export const metadata = {
+  title: "Entraînement en Ligne",
+  description: "Accompagnement global en ligne. Programmes d'optimisation métabolique et entraînements fonctionnels interactifs.",
+};
+
 export default function EnLigne() {
   return (
     <main className={rootStyles.mainWrapper}>

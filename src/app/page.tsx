@@ -6,11 +6,17 @@ import ContactForm from "../components/ContactForm";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import CallToAction from "../components/CallToAction";
+import SchemaOrg from "../components/SchemaOrg";
+
+export const metadata = {
+  title: "MotionFit-Lab | Optimisez votre corps – Élevez votre performance",
+  description: "Studio de mouvement, posture, entraînement fonctionnel et optimisation humaine à Québec.",
+};
 
 export default function Home() {
   return (
     <main className={styles.mainWrapper}>
-      
+      <SchemaOrg />
       {/* --- HEADER --- */}
       <Header />
 
@@ -22,7 +28,7 @@ export default function Home() {
           <h1 className={styles.heroTitle}>Optimisez votre corps.<br/>Élevez votre performance.</h1>
           <div className={styles.heroBottomRow}>
             <div className={styles.heroButtons}>
-              <Link href="#programmes" className="btn btn-primary">Explorer les programmes</Link>
+              <Link href="#nos-cours" className="btn btn-primary">Explorer nos cours</Link>
               <Link href="#contact" className="btn btn-secondary" style={{ marginLeft: '1rem' }}>En savoir plus</Link>
             </div>
 
@@ -34,8 +40,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* --- LIGHT SECTION: INTRO & PROGRAMMES --- */}
-      <section id="programmes" className={styles.sectionLight}>
+      {/* --- LIGHT SECTION: INTRO & COURS --- */}
+      <section id="nos-cours" className={styles.sectionLight}>
         
         <div className={styles.introGrid}>
           <div className={styles.introTextContent}>
@@ -83,46 +89,9 @@ export default function Home() {
 
       </section>
 
-      {/* --- BENTO SECTION: FEATURES --- */}
-      <section id="evaluations" className={styles.bentoContainer}>
-        
-        <div className={`${styles.bentoBox} ${styles.bentoColSpan2}`}>
-          <div className={styles.bentoIcon}>✦</div>
-          <h3>Coaches Professionnels</h3>
-          <p>Experts certifiés avec plus de 5 ans d'expérience en biomécanique clinique.</p>
-        </div>
-
-        <div className={styles.bentoBox}>
-          <div className={styles.bentoIcon}>🎯</div>
-          <h3>Haute Précision</h3>
-          <p>Analyse Biotonix.</p>
-        </div>
-
-        <div className={styles.bentoBox}>
-          <div className={styles.bentoIcon}>📊</div>
-          <h3>Scanner 3D</h3>
-          <p>Cartographie complète.</p>
-        </div>
-
-        <div className={`${styles.bentoBox} ${styles.bentoColSpan2}`}>
-          <div className={styles.bentoIcon}>✚</div>
-          <h3>Suivi Médical</h3>
-          <p>Cabinet de professionnels médicaux intégrés pour votre réhabilitation.</p>
-        </div>
-
-
-
-        <div className={styles.bentoBox}>
-          <div className={styles.bentoIcon}>⚡</div>
-          <h3>Performance</h3>
-          <p>Optimisation neuro-musculaire.</p>
-        </div>
-
-        <div id="abonnements" className={styles.bentoBox}>
-           <h3 style={{ fontSize: '3rem', margin: 0, lineHeight: 1 }}>4</h3>
-           <p>Zones sportives</p>
-        </div>
-
+      {/* --- CTA SECTION (ÉVALUATIONS) --- */}
+      <section id="evaluations" className="container" style={{ margin: '4rem auto' }}>
+        <CallToAction />
       </section>
 
       {/* --- APP PROMO SECTION --- */}
@@ -171,10 +140,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* --- CTA SECTION --- */}
-      <div className="container">
-        <CallToAction />
-      </div>
+
 
       {/* --- FOOTER --- */}
       <Footer />

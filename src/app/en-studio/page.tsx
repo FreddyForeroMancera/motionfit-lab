@@ -6,6 +6,11 @@ import CallToAction from "../../components/CallToAction";
 import styles from "./page.module.css";
 import rootStyles from "../page.module.css"; // Para utilidades globales si hicieran falta
 
+export const metadata = {
+  title: "Entraînement In Studio",
+  description: "Programmes spécialisés en studio. Entraînement privé, semi-privé et cours de groupe à Québec.",
+};
+
 export default function EnStudio() {
   return (
     <main className={rootStyles.mainWrapper}>

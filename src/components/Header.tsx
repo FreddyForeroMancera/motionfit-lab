@@ -33,12 +33,12 @@ export default function Header({ theme = 'dark' }: HeaderProps) {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
-        <Image src="/logo.png" alt="MotionFit-Lab" width={173} height={46} style={{ objectFit: 'contain' }} />
+        <Image src="/logo.png" alt="MotionFit-Lab" width={208} height={55} style={{ objectFit: 'contain' }} />
       </div>
 
       {/* Mobile Hamburger Button */}
       <button 
-        className={`${styles.hamburgerBtn} ${isLight ? styles.hamburgerBtnLight : ''}`}
+        className={`${styles.hamburgerBtn} ${isLight ? styles.hamburgerBtnLight : ''} ${isMobileMenuOpen ? styles.hamburgerBtnOpen : ''}`}
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         aria-label="Toggle menu"
       >
@@ -56,8 +56,8 @@ export default function Header({ theme = 'dark' }: HeaderProps) {
           onMouseEnter={() => setIsDropdownOpen(true)}
           onMouseLeave={() => setIsDropdownOpen(false)}
         >
-          <Link href="/programmes" className={linkClass} onClick={() => { setIsMobileMenuOpen(false); }}>
-            Programmes <span className={styles.dropdownArrow}>▾</span>
+          <Link href="/nos-cours" className={linkClass} onClick={() => { setIsMobileMenuOpen(false); }}>
+            Nos Cours <span className={styles.dropdownArrow}>▾</span>
           </Link>
           <div className={`${styles.dropdownMenu} ${isDropdownOpen ? styles.dropdownMenuOpen : ''}`}>
             <Link href="/en-studio" className={styles.dropdownItem} onClick={() => { setIsDropdownOpen(false); setIsMobileMenuOpen(false); }}>En Studio</Link>

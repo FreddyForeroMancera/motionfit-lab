@@ -5,6 +5,11 @@ import Link from "next/link";
 import styles from "./page.module.css";
 import rootStyles from "../page.module.css";
 
+export const metadata = {
+  title: "Programmes Entreprises",
+  description: "Bien-être au travail à Québec. Offrez à vos équipes une stratégie de santé corporative avec MotionFit-Lab.",
+};
+
 export default function EnEntreprises() {
   return (
     <main className={rootStyles.mainWrapper}>
