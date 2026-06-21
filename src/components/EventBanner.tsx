@@ -5,24 +5,14 @@ import styles from './EventBanner.module.css';
 export default function EventBanner() {
   return (
     <div className={styles.wrapper}>
-      <section className={styles.bannerContainer}>
-        {/* Animated glowing backgrounds */}
-        <div className={styles.glowCircle1}></div>
-        <div className={styles.glowCircle2}></div>
-
-        <div className={styles.bannerContent}>
-          <div className={styles.textColumn}>
-            <span className={styles.badge}>Spécial</span>
-            <h2 className={styles.title}>Prochain Atelier d'Animal Flow</h2>
-            <p className={styles.subtitle}>Samedi 25 Octobre - Places Limitées</p>
-          </div>
-          
-          <div className={styles.actionColumn}>
-            <Link href="/contact" className={styles.ctaButton}>
-              Réservez votre place
-            </Link>
-          </div>
-        </div>
+      <section style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'center', padding: '0 1rem' }}>
+        <Link href="/abonnements" style={{ width: '100%', display: 'block', borderRadius: '16px', overflow: 'hidden' }}>
+          <img 
+            src="/promo_banner.png?v=2" 
+            alt="Promotion" 
+            style={{ width: '100%', height: 'auto', maxHeight: '250px', objectFit: 'cover', display: 'block' }}
+          />
+        </Link>
       </section>
     </div>
   );

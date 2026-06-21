@@ -49,6 +49,7 @@ Nos enfocamos en mejorar la barra de navegación superior (`Header.tsx` y `page.
     - Se incorporó un botón principal interactivo en el *Hero* de `/en-entreprise` para lanzar el modal de cotización.
     - Se transformaron las etiquetas estáticas de ubicaciones ("Lieux") en botones interactivos (`<Link>`) con efectos hover, conectando directamente con las páginas de adquisición (`/abonnements` o `/en-entreprise`).
     - Se rediseñó el Footer incrementando el tamaño del logotipo en un 150% y añadiendo una fila elegante de íconos sociales (Facebook, Instagram, TikTok) creados con SVGs nativos para evitar conflictos de importación de librerías.
+22. **Banner Promocional**: Se reemplazó el banner promocional (EventBanner) animado con CSS en la página de inicio por una imagen estática (`promo_banner.png` ajustada a 1200x250px) enlazada a `/abonnements`. Además, se redujo a la mitad el margen superior (espaciado) entre la sección de cursos y el banner para mejorar la cohesión visual.
 
 ## 🚀 Cómo correr el proyecto localmente
 1. Abre una terminal en la ruta del proyecto (`web/`).
